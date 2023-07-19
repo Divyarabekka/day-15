@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="script.js"></script> 
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+
+    <h1> CREATE YOUR ACCOUNT</h1>  <form>
+
+        <form id="title" method="post" action="/sample_page.php">
+            First name: <input type = "text" name = "first_name" />
+            <br><br>
+            Last name: <input type = "text" name = "last_name" />
+            <br><br>
+            Address: <input type="text"  name="addres"/>
+            <br><br>
+            pincode: <input type=" text"  name="pincode"/><br><br>
+            gender:
+             <input type = "radio" name = "gender" value = "male"> male
+            <input type = "radio" name = "gender" value = "female"> female<br><br>
+            
+            <p>Choice of food:</p>
+              <label for="c1"> <input type="checkbox" name="food" value="veg" id="c1">veg</label>
+              <label for="c2"><input type="checkbox" name="food" value="Nonveg" id="c2"> NV</label>
+              <label for="c3"><input type="checkbox" name="food" value="chinees" id="c3">chinees</label>
+              <p>
+             <button id="btn">OK</button>
+              </p> <br>
+            
+            state: <input type=" text"  name="pincode"/><br><br>
+            country: <input type="text"  name="pincode"/><br><br>
+            <div class="button">
+            <input type="submit"  value="Submit" onclick="SubmitForm()"> <br><br>
+            </div>
+            </form>
+        
+        
+        <script>
+            
+           const btn = document.querySelector('#btn');
+        btn.addEventListener('click', (event) => {
+            let checkboxes = document.querySelectorAll('input[name="food"]:checked');
+            let values = [ "select any two"];
+            alert(values);
+        });  
+
+        function SubmitForm() {
+        document.getElementById("title").submit();
+        }
+
+         </script>
+        
+</body>
+</html>
